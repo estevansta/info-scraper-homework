@@ -19,12 +19,12 @@ axios.get("https://www.complex.com/sneakers/").then(function(response) {
     $("h2.feed-article__title").each(function(i, element) {
         var title = $(element).text();
         // the link variable grabs the child element within the selected element and saves the "href" attribute from the element
-        var link = $(element).children().attr("href");
+        var link = $(element).parent().attr("href");
         //  save and push the results 
         results.push({
           title: title,
           link: link
         });
     });
-    console.log(results);
+     console.log(results);
 });
